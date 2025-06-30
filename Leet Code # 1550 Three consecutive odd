@@ -1,0 +1,43 @@
+class Solution {
+public:
+    bool threeConsecutiveOdds(vector<int>& arr)
+     {
+         bool found=false;
+         int count=0;
+         int c=0;
+         int j;
+         int i;
+            for(i=c;i<arr.size();i++)//6,6<9
+            {
+                count=0;
+                      // if(i==i+3)
+                if (i + 2 < arr.size())//6<9
+                      {
+                        
+                        for(j=i;j<i+3;j++)//j=3 <3
+                        {
+                            if(arr[j]%2!=0)
+                            {
+                                // found=true;
+                                count++;
+                            }
+                            if(count==3)
+                            {
+                            found=true;
+                            break;
+                                }
+                        // found=true;
+                            // exit(1);
+                        }
+                          c=j;///c=6
+                          // found=true;
+                       
+                      }
+                    // found=true;
+
+   
+            }
+       return found;
+        
+    }
+};
